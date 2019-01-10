@@ -1,0 +1,8 @@
+<!--
+  ~ Developer email: hiankit.work@gmail.com
+  ~ GitHub: https://github.com/bxute
+  -->
+
+<resources>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBQ54GncyQj7ndCURGa7unyRLCESDhqWR4</string>
+</resources>

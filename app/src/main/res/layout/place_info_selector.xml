@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Developer email: hiankit.work@gmail.com
+  ~ GitHub: https://github.com/bxute
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:id="@+id/place_search_input_container"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/input_container_bg"
+        android:clickable="true"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/place_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/place_icon" />
+
+        <EditText
+            android:layout_toLeftOf="@+id/current_location_icon"
+            android:textStyle="bold"
+            android:id="@+id/place_search_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/place_icon"
+            android:background="@null"
+            android:hint="Gandhinagar"
+            android:paddingTop="4dp"
+            android:textColor="@color/blackColor"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/current_location_icon"
+            android:src="@drawable/live_location"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/place_search_input_container"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:background="@drawable/input_container_bg"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/distance_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/distance" />
+
+        <TextView
+            android:id="@+id/min_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/distance_icon"
+            android:paddingLeft="6dp"
+            android:text="1 Km"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/radius_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/max_range"
+            android:layout_toRightOf="@+id/min_range"
+            android:max="1000"
+            android:min="1"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:id="@+id/max_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:paddingRight="6dp"
+            android:text="1000 Km"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/place_suggestion_list"
+        android:background="@drawable/place_search_suggestions_bg"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@+id/place_search_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

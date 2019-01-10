@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Tripat</string>
+    <string name="login_message">Expand your bucketlist and Explore the nearby Destination</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="maps_style">
+
+    </string>
 </resources>
