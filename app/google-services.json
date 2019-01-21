@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "109436509577",
+    "firebase_url": "https://tripat-6bbf7.firebaseio.com",
+    "project_id": "tripat-6bbf7",
+    "storage_bucket": "tripat-6bbf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109436509577:android:69a88705631d3dda",
+        "android_client_info": {
+          "package_name": "com.bxute.tripat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109436509577-uma9i55i4ov42s1ajulol3jr16umrcvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXtvZMGzJUcNJmzf_rvYccbYqVZ9DbDjs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

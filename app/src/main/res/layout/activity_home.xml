@@ -6,36 +6,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".ui.Home">
 
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Home" />
-
-    <include layout="@layout/place_info_selector"/>
-
-    <include
-        android:id="@+id/cordinator_layer"
-        layout="@layout/cordinator_layer_home" />
-
+        android:layout_height="match_parent" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_above="@+id/bottom_bar_container"
-        android:background="@drawable/toolbar_shadow" />
+        android:layout_above="@id/bottom_bar_container"
+        android:background="@drawable/bottom_bar_shadow" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/bottom_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:background="#fff"
-        android:clickable="true">
+        android:orientation="horizontal">
 
-    </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/explore_tab"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/explore_tab_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/explore_tab_icon" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bucket_tab"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/bucket_tab_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bucket_tab_icon" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/user_tab"
+            android:clickable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/user_tab_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_tab_icon" />
+
+        </FrameLayout>
+    </LinearLayout>
 
 </RelativeLayout>

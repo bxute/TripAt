@@ -26,11 +26,10 @@
             android:layout_height="18dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:src="@drawable/place_icon" />
+            android:src="@drawable/location_search_icon" />
 
         <EditText
             android:layout_toLeftOf="@+id/current_location_icon"
-            android:textStyle="bold"
             android:id="@+id/place_search_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -48,7 +47,7 @@
             android:clickable="true"
             android:background="?selectableItemBackgroundBorderless"
             android:id="@+id/current_location_icon"
-            android:src="@drawable/live_location"
+            android:src="@drawable/current_location_filled"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
@@ -75,7 +74,7 @@
             android:layout_height="18dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:src="@drawable/distance" />
+            android:src="@drawable/trip_distance" />
 
         <TextView
             android:id="@+id/min_range"

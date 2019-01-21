@@ -5,7 +5,7 @@
     <color name="colorAccent">#07bdbd</color>
     <color name="accuracyFillColor">#1407bdbd</color>
     <color name="accuracyStrokeColor">#b364eaea</color>
-
+    <color name="mapColor">#0307bdbd</color>
 
     <color name="blackColor">#DE000000</color>
     <color name="black1">#8A000000</color>

@@ -10,11 +10,11 @@
     android:layout_width="match_parent"
     android:background="#ffffff"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".ui.Login">
 
     <ImageView
         android:id="@+id/logo"
-        android:src="@drawable/logo_colored"
+        android:src="@drawable/primary_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:layout_width="56dp"

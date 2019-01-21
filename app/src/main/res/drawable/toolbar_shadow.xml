@@ -4,10 +4,10 @@
 
     <size
         android:width="400dp"
-        android:height="2dp" />
+        android:height="20dp" />
 
     <gradient
-        android:angle="90"
+        android:angle="270"
         android:endColor="#00ffffff"
         android:startColor="#1f484848" />
 

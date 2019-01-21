@@ -1,60 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Developer email: hiankit.work@gmail.com
   ~ GitHub: https://github.com/bxute
   -->
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="12dp"
-    android:paddingRight="16dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
 
-    <ImageView
-        android:background="#eeeeee"
-        android:id="@+id/place_image"
-        android:layout_width="109dp"
-        android:scaleType="fitCenter"
-        android:layout_height="82dp" />
-
-    <TextView
-        android:id="@+id/place_title"
-        android:layout_toRightOf="@+id/place_image"
-        android:layout_marginLeft="16dp"
-        android:textColor="@color/colorAccent"
-        android:text="Ahmedabad"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="4dp"
+    <RelativeLayout
+        android:id="@+id/info_container"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
-    <TextView
-        android:layout_below="@+id/place_title"
-        android:id="@+id/place_distance"
-        android:layout_toRightOf="@+id/place_image"
+        <ImageView
+            android:id="@+id/place_image"
+            android:layout_width="109dp"
+            android:layout_height="82dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/circular_image_placeholder" />
+
+        <TextView
+            android:id="@+id/place_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/bucket_button"
+            android:layout_toRightOf="@+id/place_image"
+            android:text="Ahmedabad"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/place_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@+id/bucket_button"
+            android:layout_toRightOf="@+id/place_image"
+            android:text="40 Km Away"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/place_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_distance"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/place_image"
+            android:text="Historical / Food"
+            android:textColor="@color/blackColor"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/bucket_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="8dp"
+            android:src="@drawable/bucket" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
         android:layout_marginLeft="16dp"
-        android:textColor="@color/blackColor"
-        android:text="40 Km Away"
-        android:textSize="16sp"
-        android:layout_marginTop="4dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_marginRight="16dp"
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/info_container"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/place_tags"
-        android:layout_toRightOf="@+id/place_image"
-        android:layout_marginLeft="16dp"
-        android:textColor="@color/blackColor"
-        android:text="Historical / Food"
-        android:textSize="12sp"
-        android:layout_marginTop="4dp"
-        android:layout_below="@+id/place_distance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/removeFromBucketButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blackColor"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Remove"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
 
+        <TextView
+            android:id="@+id/markVisitedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Visited"
+            android:textColor="@color/blackColor"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>
